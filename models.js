@@ -27,22 +27,22 @@ AppUser.init({
     modelName: 'AppUser', // We need to choose the model name
 });
 
-class Dog extends Model {
+class Question extends Model {
 
 }
 
-Dog.init({
+Question.init({
     firstName: {
         type: DataTypes.STRING,
         // allowNull: false
     },
-    lastName: {
+    question: {
         type: DataTypes.STRING,
         // allowNull: false
     }
 }, {
     sequelize, // We need to pass the connection instance
-    modelName: 'Dog', // We need to choose the model name
+    modelName: 'Question', // We need to choose the model name
 });
 
 
@@ -50,6 +50,7 @@ class Category extends Model {
 
 }
 
+/*
 Category.init({
     name: {
         type: DataTypes.STRING,
@@ -79,12 +80,13 @@ Question.init({
     modelName: 'Question', // We need to choose the model name
 });
 
+*/
 Category.hasMany(Question, { foreignKey: 'categoryId' });
 Question.belongsTo(Category, { foreignKey: 'categoryId' });
 
 
 sequelize.sync({alter: true});
 
-module.exports = {Dog, Category, Question, AppUser};
+module.exports = {Category, Question, AppUser};
 
 // module.exports = {Dog: Dog, Cat: Cat};
