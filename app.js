@@ -9,7 +9,7 @@ require('./db');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-var dogsRouter = require('./routes/dogs');
+var questionsRouter = require('./routes/questions');
 
 var categoriesRouter = require('./routes/categories');
 var questionsRouter = require('./routes/questions');
@@ -32,7 +32,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
-app.use('/dogs', dogsRouter);
+app.use('/questions', questionsRouter);
 
 
 app.use('/questions', questionsRouter);

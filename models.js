@@ -36,7 +36,7 @@ Question.init({
         type: DataTypes.STRING,
         // allowNull: false
     },
-    question: {
+    lastName: {
         type: DataTypes.STRING,
         // allowNull: false
     }
@@ -45,12 +45,12 @@ Question.init({
     modelName: 'Question', // We need to choose the model name
 });
 
-
+/*
 class Category extends Model {
 
 }
 
-/*
+
 Category.init({
     name: {
         type: DataTypes.STRING,
@@ -79,10 +79,10 @@ Question.init({
     sequelize, // We need to pass the connection instance
     modelName: 'Question', // We need to choose the model name
 });
-
 */
-Category.hasMany(Question, { foreignKey: 'categoryId' });
-Question.belongsTo(Category, { foreignKey: 'categoryId' });
+
+//Category.hasMany(Question, { foreignKey: 'categoryId' });
+//Question.belongsTo(Category, { foreignKey: 'categoryId' });
 
 
 sequelize.sync({alter: true});
