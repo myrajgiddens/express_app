@@ -36,8 +36,8 @@ Question.init({
         type: DataTypes.STRING,
         // allowNull: false
     },
-    lastName: {
-        type: DataTypes.STRING,
+    questionHere: {
+        type: 'LONGTEXT',
         // allowNull: false
     }
 }, {
