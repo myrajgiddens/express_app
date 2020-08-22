@@ -87,6 +87,6 @@ Question.init({
 
 sequelize.sync({alter: true});
 
-module.exports = {Category, Question, AppUser};
+module.exports = {Question, AppUser};
 
 // module.exports = {Dog: Dog, Cat: Cat};
