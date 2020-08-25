@@ -39,7 +39,11 @@ Question.init({
     questionHere: {
         type: 'LONGTEXT',
         // allowNull: false
-    }
+    },
+     categoryName: {
+        type: DataTypes.STRING,
+        // allowNull: false
+    },
 }, {
     sequelize, // We need to pass the connection instance
     modelName: 'Question', // We need to choose the model name
